@@ -1,0 +1,161 @@
+.user-registerContainer{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/register-user.jpg");
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.user-registerBox {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  align-self: center; /* căn giữa theo chiều dọc */
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+
+  /* Tỉ lệ co giãn: min 280px, max 400px hoặc ~30% màn hình */
+  width: 30%;
+  height: auto;
+  animation: fadeIn 0.6s ease-in-out;
+  display: flex;
+  flex-direction: column;    /* sắp xếp dọc */
+  align-items: center;
+}
+
+.user-registerTitle {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #000000;
+}
+
+
+
+.user-registerInput{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.user-registerInput input{
+    padding: 1rem 1rem ;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+}
+
+.user-registerUserName{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+}
+
+.user-registerUserName input {
+  width: 90%;
+  padding: 1rem 1rem;
+  padding-left: 40px;  /* đẩy text qua phải để chừa chỗ cho icon */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 2rem;
+  color: #000000;
+  font-size: 1rem;
+  outline: none;
+  transition: background 0.3s ease;
+  background: rgba(255,255,255,0.6) url("/user.png") no-repeat 10px center;
+  background-size: 20px 20px;
+}
+
+.user-registerEmailInput {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.user-registerEmailInput input {
+  width: 90%;
+  padding: 1rem 1rem;
+  padding-left: 40px;  /* đẩy text qua phải để chừa chỗ cho icon */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 2rem;
+  color: #000000;
+  font-size: 1rem;
+  outline: none;
+  transition: background 0.3s ease;
+  background: rgba(255,255,255,0.6) url("/mail.png") no-repeat 10px center;
+  background-size: 20px 20px;
+}
+
+.user-registerPasswordInput {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+
+.user-registerPasswordInput input {
+  width: 90%;
+  height: auto;
+  padding: 1rem 1rem;
+  padding-left: 40px;  /* đẩy text qua phải để chừa chỗ cho icon */
+  padding-right:40px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 2rem;
+  color: #000000;
+  font-size: 1rem;
+  outline: none;
+  transition: background 0.3s ease;
+  background: rgba(255,255,255,0.6) url("/padlock.png") no-repeat 10px center;
+  background-size: 20px 20px;
+}
+
+
+.user-register-toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 38%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background: none !important;
+  border: none;
+  padding-right: 30px;
+}
+
+.user-register-toggle-password img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+
+.user-registerButton {
+  width: 60%;
+  border-radius: 2rem;
+  height: auto;
+  font-size: 1rem;
+  padding: 10px;
+
+  color: rgb(0, 0, 0);                                        /* Màu chữ */
+  background: #ffffff80;                      /* Nền tối bán trong suốt */
+  border: 1px solid rgba(255, 255, 255, 0.3);          /* Viền mờ giống các input */
+  backdrop-filter: blur(5px);                          /* Hiệu ứng mờ nền */
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease; /* Hiệu ứng hover */
+}
+
+.user-registerButton:hover {
+  background: rgba(199, 242, 230, 0.7);                     /* Nền đậm hơn khi hover */
+  transform: scale(1.05);                             /* Nhẹ nhàng phóng to khi hover */
+}

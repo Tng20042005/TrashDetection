@@ -1,0 +1,202 @@
+/* Nền gradient full màn hình */
+.admin-loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;                 /* luôn đủ chiều cao */
+  width: 100vw;                      /* luôn đủ chiều rộng */
+  background-image: url("/login-admin.jpg"); 
+  background-size: cover;      
+  background-repeat: no-repeat; 
+  background-position: center;
+  box-sizing: border-box;
+
+}
+
+.admin-loginPanel {
+  display: flex;
+  width: 70%;             /* hoặc tuỳ ý, ví dụ 60% */
+  max-width: 1000px;
+  border-radius: 2rem;
+  overflow: hidden;       /* bo góc cả 2 bên */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.admin-loginLeft, .admin-loginBox {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* căn giữa nội dung theo chiều dọc */
+  align-items: center;
+  padding: 2rem;
+}
+
+.admin-loginBox {
+  width: 80%;
+  align-items: center;
+}
+
+/* Left: thêm nền sáng hoặc mờ */
+.admin-loginLeft, .admin-loginBox {
+  backdrop-filter: blur(10px);
+  background: rgb(235, 237, 234);  /* dùng cùng màu nền */
+}
+
+
+/* Tiêu đề */
+.admin-loginTitle {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #000000;
+}
+
+/* Input style */
+.admin-loginBox input {
+  width: 90%;           
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 2rem;
+  background: rgba(27, 74, 81, 0.3);
+  color: #000000;
+  outline: none;
+  font-size: 1rem;
+}
+
+
+/* Nút đăng nhập */
+.admin-loginBox > .admin-loginButton {
+  width: 90%;
+  padding: 0.75rem;
+  background: rgba(140, 173, 222, 0.4);
+  color: #000000;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+
+.admin-loginBox button:hover {
+  background: rgba(149, 158, 229, 0.6);
+}
+
+/* Lỗi */
+.admin-loginErrorMessage {
+  color: #000000;
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+
+.admin-loginInput {
+  width: 90%;
+  display: flex;
+  flex-direction: column; /* sắp xếp dọc */
+  align-items: center;    /* căn giữa theo chiều ngang */
+}
+
+
+.admin-loginEmailInput {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row; /* sắp xếp dọc */
+  align-items: center;    /* căn giữa theo chiều ngang */
+  padding: 10px;
+}
+
+.admin-loginEmailInput input {
+  width: 90%;
+  padding: 1rem 1rem;
+  padding-left: 40px;  /* đẩy text qua phải để chừa chỗ cho icon */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 2rem;
+  color: #000000;
+  font-size: 1rem;
+  outline: none;
+  transition: background 0.3s ease;
+  background: rgba(255,255,255,0.6) url("/mail.png") no-repeat 10px center;
+  background-size: 20px 20px;
+}
+
+
+.admin-loginPasswordInput {
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  padding: 10px;
+  flex-direction: row;
+}
+
+.admin-loginPasswordInput input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  padding-left: 40px; /* chừa chỗ bên trái cho icon khóa */
+  padding-right: 40px; /* chừa chỗ bên phải cho icon eye */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 2rem;
+  color: #000000;
+  font-size: 1rem;
+  outline: none;
+  transition: background 0.3s ease;
+  background: rgba(255,255,255,0.6) url("/padlock.png") no-repeat 10px center;
+  background-size: 20px 20px;
+  flex-direction: row;
+}
+
+.admin-login-toggle-password {
+  position: absolute;
+  top: 40%;
+  right: 15px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+
+
+
+
+.admin-login-toggle-password img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.admin-loginButton {
+  width: 100%;                      /* rộng gần bằng input */
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 2rem;             /* bo tròn */
+  background-color: rgba(255, 255, 255, 0.6);  /* nền đậm */
+  color: #000000;                  /* chữ trắng */
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

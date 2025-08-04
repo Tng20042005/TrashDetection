@@ -1,0 +1,162 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f4f4;
+}
+
+/* Main wrapper */
+.admin-dashboard {
+  height: 100vh;
+  width: 100vw;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background-image: url("/admin-dashboardBackground.jpg");
+  background-size: cover;
+  background-position: center;
+
+}
+
+/* HEADER (title + logout) */
+.admin-dashboardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+/* Title */
+.admin-dashboardTitle {
+  font-size: 28px;
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+.admin-dashboardLogout {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Logout Button */
+.admin-dashboardLogoutButton{
+  padding: 10px 20px;
+  background-color: #d32f2f;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.admin-dashboardLogoutButton:hover {
+  background-color: #b71c1c;
+}
+
+/* Table Container (middle of screen) */
+.admin-dashboardContainerManage {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Table Style */
+.user-table {
+  width: 80%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.user-table thead {
+  background-color: #388e3c;
+  color: white;
+  text-align: left;
+}
+
+.user-table th,
+.user-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.user-table tr:hover {
+  background-color: #f1f8e9;
+}
+
+/* Nút Xoá */
+.admin-dashboardDeleteUserButton {
+  background-color: #d45656;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.admin-dashboardDeleteUserButton:hover {
+  background-color: #7e4f4fd4;
+}
+
+/* Nút Chỉnh sửa (Edit) */
+.admin-dashboardEditUserRoleButton {
+  background-color: #42a5f5;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.admin-dashboardEditUserRoleButton:hover {
+  background-color: #6b99c1;
+}
+
+/* Nút Cập nhật (Update) */
+.admin-dashboardUpdateUserRoleButton {
+  background-color: #66bb6a;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.admin-dashboardUpdateUserRoleButton:hover {
+  background-color: #4e8a76;
+}
+
+/* Nút Huỷ (Cancel) */
+.admin-dashboardCancelButton {
+  background-color: #64b9c4;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.admin-dashboardCancelButton:hover {
+  background-color: #966060;
+}
+
+/* Select Role Styling */
+.user-table select {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+
+

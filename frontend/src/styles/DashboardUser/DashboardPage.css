@@ -1,0 +1,291 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #ffffff; /* Nền trắng */
+  color: #000000;            /* Chữ đen */
+  overflow: hidden;
+  background-size: cover;
+}
+
+.user-dashboard {
+  display: flex;               /* sắp xếp ngang */
+  justify-content: space-between; /* dàn đều các thành phần con */
+  align-items: center;         /* căn giữa theo chiều cao */
+  width: 100vw;                /* full chiều rộng viewport */
+  height: 100vh;               /* full chiều cao viewport */
+  padding: 20px;      
+  background-image: url("/dashboard-user.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;      ;
+  box-sizing: border-box;         /* khoảng cách bên trong */
+}
+
+/* Background */
+
+.user-dashboardSetings {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 15%; /* hoặc 250px cố định */
+  height: 5%;
+  background: #ffffff;
+  color: #000000;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  z-index: 3;
+}
+
+.user-dashboardForm {
+  width: 100%;  
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+
+
+.user-dashboardSetingTitle {
+  width: auto;
+  height: auto;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+}
+
+
+
+/* Logout button */
+.user-dashboardLogoutButton {
+  width: auto ;  
+  height: auto;
+  padding: 4px 10px;
+  background-color: #b0e9ff;
+  color: #000000;
+  border: none;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.user-dashboardLogoutButton:hover {
+  background-color: #fd0000fd;
+}
+
+
+.data {
+  font-size: 18px;
+  color: #000000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+  }
+  .camera-feed, .results-panel {
+    margin: 10px 0;
+  }
+}
+
+/* Style nút Camera và Image */
+.cameraButton,
+.imageButton {
+  padding: 12px 24px;
+  margin: 12px;
+  font-size: 16px;
+  background-color: #007bff; /* Màu xanh dương */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cameraButton:hover,
+.imageButton:hover {
+  background-color: #0056b3; /* Màu xanh đậm khi hover */
+}
+
+/* Căn giữa toàn bộ nội dung */
+.user-dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.main-content {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 800px;
+  margin-bottom: 32px;
+}
+
+/* Nhóm nút Camera / Image */
+/* Nhóm nút Camera / Image */
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+/* Nút camera và image chung */
+.cameraButton,
+.imageButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  border-radius: 999px; /* Bo tròn hoàn toàn */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Nút Camera */
+.cameraButton {
+  background: linear-gradient(135deg, #28a745, #218838);
+}
+.cameraButton:hover {
+  background: linear-gradient(135deg, #218838, #1e7e34);
+  transform: scale(1.05);
+}
+
+/* Nút Image */
+.imageButton {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+}
+.imageButton:hover {
+  background: linear-gradient(135deg, #0056b3, #004085);
+  transform: scale(1.05);
+}
+
+/* Icon trong nút */
+.cameraButton svg,
+.imageButton svg {
+  width: 20px;
+  height: 20px;
+  fill: white;
+}
+
+/* Responsive button group */
+@media (max-width: 600px) {
+  .buttonGroup {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .cameraButton,
+  .imageButton {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+
+
+.camera-preview {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+.image-preview {
+  margin-top: 12px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+
+.result-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+}
+
+.tab-content {
+  margin-top: 16px;
+  width: 80%;
+  height: 80%;
+}
+
+.camera-preview {
+  max-width: 100%;
+  height: auto;
+}
+
+.overlay-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.dashboard-footer {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 20px 40px;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  border-top: 1px solid #444;
+  border-radius: 12px;   /* Bo tròn góc */
+  margin: 20px auto;     /* cách đều trên dưới, căn giữa */
+  max-width: 800px;      /* giới hạn rộng để footer không quá dài */
+}
+
+
+.dashboard-footer p {
+  margin: 6px 0;
+  word-wrap: break-word;   /* xuống dòng khi quá dài */
+}
+
+.dashboard-footer a {
+  color: #61dafb;           /* màu link nổi bật */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.dashboard-footer a:hover {
+  color: #21a1f1;
+  text-decoration: underline;
+}
+
+/* Responsive: nhỏ hơn 600px thì padding giảm, font nhỏ hơn */
+@media (max-width: 600px) {
+  .dashboard-footer {
+    padding: 15px 20px;
+    font-size: 13px;
+  }
+}
